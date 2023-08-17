@@ -2,7 +2,6 @@
 resource "aws_ecr_repository" "main" {
   name                 = var.project_name
   image_tag_mutability = "MUTABLE"
-
   tags = {
     Name = var.project_name
   }
@@ -11,7 +10,6 @@ resource "aws_ecr_repository" "main" {
 # Rule to keep last 10 images
 resource "aws_ecr_lifecycle_policy" "main" {
   repository = aws_ecr_repository.main.name
-
   policy = jsonencode({
     rules = [
       {

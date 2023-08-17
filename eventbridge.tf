@@ -2,9 +2,7 @@
 resource "aws_cloudwatch_event_rule" "main" {
   name        = "${var.project_name}-event-rule"
   description = "Cronjob rule for scheduling ${var.project_name}"
-
   schedule_expression = var.cron_expression
-
   tags = {
     Name = var.project_name
   }

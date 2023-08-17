@@ -23,7 +23,7 @@ resource "aws_iam_role" "cronjob" {
   }
 }
 
-# Attatch default ECS task role to the iam
+# Attach default ECS task role to the iam
 resource "aws_iam_role_policy_attachment" "ecsTaskExecutionRole_policy" {
   role       = aws_iam_role.cronjob.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
