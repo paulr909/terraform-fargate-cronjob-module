@@ -6,7 +6,7 @@ Terraform module which creates all the basic cronjob resources on AWS Fargate.
 [AWS crontime format documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html)
 ```hcl
 module "cronjob" {
-  source = "git::https://github.com/profusionuk/terraform-fargate-cronjob-module.git"
+  source = "git::https://github.com/paulr909/terraform-fargate-cronjob-module.git"
   
   # This variable will be used for all resource naming
   # required
